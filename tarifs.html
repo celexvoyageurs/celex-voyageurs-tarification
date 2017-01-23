@@ -1,0 +1,74 @@
+<form class="">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <table class="table table-striped">
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="departure_city">Ville de départ</label>
+                            <select name="departure_city" ng-model="tarificationCtrl.departure_city"
+                                    class="form-control" ng-change="tarificationCtrl.onUpdateField()">
+                                <option ng-repeat="city in tarificationCtrl.cities" value="{{city}}">{{ city }}</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="destination">Arrivée</label>
+                            <select name="destination" ng-model="tarificationCtrl.destination" class="form-control"
+                                    ng-change="tarificationCtrl.onUpdateField()">
+                                <option ng-repeat="destination in tarificationCtrl.destinations"
+                                        value="{{destination}}">{{ destination }}
+                                </option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="form-group">
+                            <label for="people">Nombre de personnes à transporter</label>
+                            <select name="people" ng-model="tarificationCtrl.people" class="form-control"
+                                    ng-change="tarificationCtrl.onUpdateField()">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <strong>Aller / retour</strong>
+                    </td>
+                    <td>
+                        <strong>{{ tarificationCtrl.priceAR }} €</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <strong>Aller ou retour</strong>
+                    </td>
+                    <td>
+                        <strong>{{ tarificationCtrl.priceAS }} €</strong>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1é col-sm-6 col-md-4">
+            <i>
+                Notre tarificateur vous permet de calculer le coût de votre trajet à destination des principaux aéroports, gares et lieux touristiques de la région. Pour toute autre demande, n’hésitez pas à nous adresser votre requête en utilisant notre formulaire de contact.
+            </i>
+        </div>
+    </div>
+</form>
