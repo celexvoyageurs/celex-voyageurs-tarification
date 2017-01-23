@@ -49,16 +49,22 @@
                     <td class="text-center">
                         <strong>Aller / retour</strong>
                     </td>
-                    <td>
+                    <td ng-if="tarificationCtrl.showPrices">
                         <strong>{{ tarificationCtrl.priceAR }} €</strong>
+                    </td>
+                    <td ng-if="!tarificationCtrl.showPrices">
+                        <i class="fa fa-spinner fa-spin fa-fw"></i>
                     </td>
                 </tr>
                 <tr>
                     <td class="text-center">
                         <strong>Aller ou retour</strong>
                     </td>
-                    <td>
+                    <td ng-if="tarificationCtrl.showPrices">
                         <strong>{{ tarificationCtrl.priceAS }} €</strong>
+                    </td>
+                    <td ng-if="!tarificationCtrl.showPrices">
+                        <i class="fa fa-spinner fa-spin fa-fw"></i>
                     </td>
                 </tr>
             </table>

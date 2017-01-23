@@ -30,6 +30,9 @@ angular.module("app").controller("TarificationController", function (citiesWeigh
             self.priceAS = 1.1 * (self.priceAR / 2);
             self.priceAR = Math.round(self.priceAR * 100) / 100;
             self.priceAS = Math.round(self.priceAS * 100) / 100;
+            self.showPrices = true;
+        } else {
+            self.showPrices = false;
         }
     }
 });
